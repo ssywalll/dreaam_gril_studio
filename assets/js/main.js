@@ -57,8 +57,8 @@ function renderTrending() {
   const container = document.getElementById("trending-grid");
   container.innerHTML = trendingItems.map((item) => `
     <article class="trend-card section-fade overflow-hidden rounded-[1.7rem] bg-[#111827] shadow-card">
-      <div class="relative h-[320px] overflow-hidden">
-        <img src="${item.image}" alt="${item.title}" class="h-full w-full object-cover opacity-90">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async" class="h-full w-full object-cover opacity-90">
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
           <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-pink-200">${item.tag}</p>
           <h3 class="mt-2 text-xl font-extrabold">${item.title}</h3>
@@ -72,7 +72,7 @@ function renderGallery() {
   const container = document.getElementById("gallery-grid");
   container.innerHTML = galleryItems.map((image, index) => `
     <article class="gallery-tile section-fade overflow-hidden rounded-[1.4rem] bg-white shadow-card">
-      <img src="${image}" alt="Galeri design ${index + 1}" class="h-44 w-full object-cover md:h-64">
+      <img src="${image}" alt="Galeri design ${index + 1}" loading="lazy" decoding="async" class="aspect-square w-full object-cover">
     </article>
   `).join("");
 }
@@ -81,12 +81,19 @@ function renderSocial() {
   const container = document.getElementById("social-grid");
   container.innerHTML = socialItems.map((image, index) => `
     <article class="social-tile section-fade overflow-hidden rounded-[1.4rem] bg-white p-3 shadow-card">
-      <img src="${image}" alt="Postingan studio ${index + 1}" class="h-56 w-full rounded-[1rem] object-cover">
+      <img src="${image}" alt="Postingan studio ${index + 1}" loading="lazy" decoding="async" class="aspect-square w-full rounded-[1rem] object-cover">
     </article>
   `).join("");
 }
 
 function revealOnScroll() {
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll(".section-fade").forEach((element) => {
+      element.classList.add("is-visible");
+    });
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

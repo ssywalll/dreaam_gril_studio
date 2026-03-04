@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,6 +27,8 @@ body {
 .gallery-tile,
 .social-tile {
   transition: transform 180ms ease, box-shadow 180ms ease;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 320px;
 }
 
 .service-card:hover,
@@ -54,4 +60,41 @@ body {
 .section-fade.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .hero-card::after {
+    inset: 10px;
+  }
+
+  .service-card:hover,
+  .trend-card:hover,
+  .gallery-tile:hover,
+  .social-tile:hover {
+    transform: none;
+    box-shadow: 0 18px 40px rgba(18, 24, 38, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .service-card,
+  .trend-card,
+  .gallery-tile,
+  .social-tile,
+  .trend-card img,
+  .gallery-tile img,
+  .social-tile img,
+  .section-fade {
+    transition: none;
+  }
+
+  .section-fade,
+  .section-fade.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
