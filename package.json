@@ -2,10 +2,10 @@
   "name": "dream-girl-studio",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/style.css -o ./assets/css/build.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/style.css -o ./assets/css/build.css --watch"
-  },
+ "scripts": {
+  "build": "tailwindcss -i ./assets/css/style.css -o ./assets/css/build.css --minify",
+  "watch": "tailwindcss -i ./assets/css/style.css -o ./assets/css/build.css --watch"
+},
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
