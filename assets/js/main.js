@@ -121,7 +121,38 @@ function revealOnScroll() {
   document.querySelectorAll(".section-fade").forEach((element) => observer.observe(element));
 }
 
+function setupMobileMenu() {
+  const button = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  if (!button || !menu) {
+    return;
+  }
+
+  const closeMenu = () => {
+    menu.classList.add("hidden");
+    button.setAttribute("aria-expanded", "false");
+  };
+
+  button.addEventListener("click", () => {
+    const isOpen = !menu.classList.contains("hidden");
+    menu.classList.toggle("hidden");
+    button.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      closeMenu();
+    }
+  });
+}
+
 renderTrending();
 renderGallery();
 renderSocial();
 revealOnScroll();
+setupMobileMenu();

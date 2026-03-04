@@ -15,7 +15,7 @@
 <body class="bg-[#f6eff2] font-sans text-slate-900">
   <div class="min-h-screen">
     <header class="sticky top-0 z-50 border-b border-white/50 bg-[#f6eff2]/90 backdrop-blur">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 md:px-8">
         <a href="#home" class="flex items-center gap-2 text-xs font-extrabold tracking-wide text-ink sm:text-sm">
           <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-blush text-xs text-white">D</span>
           DreamyGirl Studio
@@ -24,9 +24,31 @@
           <a href="#services" class="transition hover:text-blush">Layanan</a>
           <a href="#trending" class="transition hover:text-blush">Trending</a>
           <a href="#gallery" class="transition hover:text-blush">Gallery</a>
+          <a href="#location" class="transition hover:text-blush">Lokasi</a>
           <a href="#pricing" class="transition hover:text-blush">Harga</a>
         </nav>
-        <a href="#contact" class="shrink-0 rounded-full bg-blush px-3 py-2 text-[11px] font-bold text-white shadow-lg shadow-pink-300/50 transition hover:-translate-y-0.5 sm:px-4 sm:text-xs">Booking Sekarang</a>
+        <div class="flex items-center gap-2">
+          <a href="#contact" class="shrink-0 rounded-full bg-blush px-3 py-2 text-[11px] font-bold text-white shadow-lg shadow-pink-300/50 transition hover:-translate-y-0.5 sm:px-4 sm:text-xs">Booking Sekarang</a>
+          <button
+            type="button"
+            id="mobile-menu-button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Buka menu navigasi"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 md:hidden"
+          >
+            <span class="text-lg leading-none">≡</span>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-white/60 bg-[#f6eff2]/95 px-4 py-4 md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-semibold text-slate-700">
+          <a href="#services" class="rounded-xl bg-white px-4 py-3 shadow-sm">Layanan</a>
+          <a href="#trending" class="rounded-xl bg-white px-4 py-3 shadow-sm">Trending</a>
+          <a href="#gallery" class="rounded-xl bg-white px-4 py-3 shadow-sm">Gallery</a>
+          <a href="#location" class="rounded-xl bg-white px-4 py-3 shadow-sm">Lokasi</a>
+          <a href="#pricing" class="rounded-xl bg-white px-4 py-3 shadow-sm">Harga</a>
+        </nav>
       </div>
     </header>
 
@@ -35,14 +57,14 @@
         <div class="absolute inset-0 bg-soft-grid bg-[size:28px_28px] opacity-20"></div>
         <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 md:px-8 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
           <div class="relative z-10">
-            <span class="inline-flex rounded-full border border-blush/20 bg-white/70 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-blush">Nail Art & Beauty Lounge</span>
+            <span class="inline-flex max-w-full rounded-full border border-blush/20 bg-white/70 px-4 py-1 text-[11px] font-bold uppercase tracking-[0.24em] text-blush sm:text-xs sm:tracking-[0.3em]">Nail Art & Beauty Lounge</span>
             <h1 class="mt-6 max-w-xl font-display text-4xl leading-tight text-ink sm:text-5xl md:text-7xl">Dreamy Girl Studio</h1>
             <p class="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base md:text-lg md:leading-8">
               Pengalaman premium untuk nail art, lash beauty, dan ritual pampering dengan sentuhan modern, detail rapi, dan nuansa soft glam setiap hari.
             </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#pricing" class="rounded-full bg-blush px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-300/40 transition hover:-translate-y-0.5">Booking Appointment</a>
-              <a href="#gallery" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-800 transition hover:border-blush hover:text-blush">Lihat Semua Design</a>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <a href="#pricing" class="w-full rounded-full bg-blush px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-pink-300/40 transition hover:-translate-y-0.5 sm:w-auto">Booking Appointment</a>
+              <a href="#gallery" class="w-full rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-bold text-slate-800 transition hover:border-blush hover:text-blush sm:w-auto">Lihat Semua Design</a>
             </div>
             <div class="mt-10 grid max-w-lg grid-cols-1 gap-4 sm:grid-cols-3">
               <div class="rounded-2xl bg-white/80 p-4 shadow-card">
@@ -93,7 +115,7 @@
           <h2 class="font-display text-3xl text-ink md:text-4xl">Layanan Kami</h2>
           <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-blush"></div>
         </div>
-        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
             <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=70" alt="Nail art" width="700" height="560" loading="lazy" decoding="async" class="h-48 w-full rounded-[1.2rem] object-cover">
             <h3 class="mt-4 text-lg font-extrabold text-ink">Nail Art</h3>
@@ -145,7 +167,7 @@
           <h2 class="font-display text-3xl text-ink md:text-4xl">Galeri Design</h2>
           <p class="mt-3 text-sm text-slate-500">Inspirasi detail cantik untuk appointment kamu berikutnya.</p>
         </div>
-        <div id="gallery-grid" class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4"></div>
+        <div id="gallery-grid" class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
       </section>
 
       <section id="pricing" class="bg-white/60 py-14">
@@ -158,19 +180,19 @@
             <div class="rounded-[2rem] bg-white p-6 shadow-card">
               <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Nails & Gel</p>
               <div class="mt-5 space-y-4 text-sm text-slate-600">
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Classic Manicure</span><span class="shrink-0 font-bold text-ink">Rp. 166.050</span></div>
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Signature Gel Set</span><span class="shrink-0 font-bold text-ink">mulai Rp. 275.000</span></div>
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Full Nailart Extension</span><span class="shrink-0 font-bold text-ink">Rp. 332.100</span></div>
-                <div class="flex items-start justify-between gap-4"><span>Deluxe Pedicure</span><span class="shrink-0 font-bold text-ink">Rp. 221.400</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Classic Manicure</span><span class="shrink-0 font-bold text-ink">Rp. 166.050</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Signature Gel Set</span><span class="shrink-0 font-bold text-ink">mulai Rp. 275.000</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Full Nailart Extension</span><span class="shrink-0 font-bold text-ink">Rp. 332.100</span></div>
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Deluxe Pedicure</span><span class="shrink-0 font-bold text-ink">Rp. 221.400</span></div>
               </div>
             </div>
             <div class="rounded-[2rem] bg-white p-6 shadow-card">
               <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Lashes & Brows</p>
               <div class="mt-5 space-y-4 text-sm text-slate-600">
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Natural Classic Set</span><span class="shrink-0 font-bold text-ink">Rp. 120.000</span></div>
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Hybrid / Volume Set</span><span class="shrink-0 font-bold text-ink">Rp. 225.000</span></div>
-                <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4"><span>Lash Lift & Tint</span><span class="shrink-0 font-bold text-ink">Rp. 135.000</span></div>
-                <div class="flex items-start justify-between gap-4"><span>Brow Lamination & Styling</span><span class="shrink-0 font-bold text-ink">Rp. 155.000</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Natural Classic Set</span><span class="shrink-0 font-bold text-ink">Rp. 120.000</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Hybrid / Volume Set</span><span class="shrink-0 font-bold text-ink">Rp. 225.000</span></div>
+                <div class="flex flex-col gap-1 border-b border-slate-100 pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Lash Lift & Tint</span><span class="shrink-0 font-bold text-ink">Rp. 135.000</span></div>
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4"><span>Brow Lamination & Styling</span><span class="shrink-0 font-bold text-ink">Rp. 155.000</span></div>
               </div>
             </div>
           </div>
@@ -181,9 +203,66 @@
         <div class="rounded-[2.4rem] bg-gradient-to-r from-[#ffe5ef] via-[#fff6f9] to-[#f6dbe6] px-5 py-12 text-center shadow-card sm:px-8 sm:py-14">
           <h2 class="font-display text-3xl text-ink md:text-4xl">Siap Untuk Dimanjakan?</h2>
           <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600">Booking slot kamu hari ini melalui platform yang paling nyaman. Kami sarankan reservasi 2 minggu lebih awal untuk request design spesial.</p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/6285654105889" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-green-200">WhatsApp</a>
-            <a href="https://www.instagram.com/dreamygirl.studio/" class="inline-flex items-center rounded-full bg-blush px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-200">Instagram DM</a>
+          <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap">
+            <a href="https://wa.me/6285654105889" target="_blank" rel="noreferrer" class="inline-flex w-full items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-green-200 sm:w-auto">WhatsApp</a>
+            <a href="https://www.instagram.com/dreamygirl.studio/" class="inline-flex w-full items-center justify-center rounded-full bg-blush px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-200 sm:w-auto">Instagram DM</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="mx-auto max-w-7xl px-4 py-14 md:px-8">
+        <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="rounded-[2rem] bg-[#fff8fb] p-6 shadow-card sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Lokasi Studio</p>
+            <h2 class="mt-4 font-display text-3xl text-ink md:text-4xl">Temukan Kami Dengan Mudah</h2>
+            <p class="mt-4 max-w-xl text-sm leading-7 text-slate-600">
+              Studio kami berada di area Penajam dengan akses yang mudah dijangkau. Cocok untuk client yang ingin datang langsung untuk appointment, konsultasi design, atau treatment rutin.
+            </p>
+
+            <div class="mt-8 space-y-4">
+              <div class="rounded-[1.5rem] border border-blush/10 bg-white p-5">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-slate-500">Alamat</p>
+                <p class="mt-3 text-sm leading-7 text-slate-700">PQQ8+4X6 Andi Az, Penajam, Kabupaten Penajam Paser Utara, Kalimantan Timur 76142</p>
+              </div>
+              <div class="rounded-[1.5rem] border border-blush/10 bg-white p-5">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-slate-500">Jam Operasional</p>
+                <p class="mt-3 text-sm leading-7 text-slate-700">Senin - Sabtu, 10.00 - 20.00 WITA</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=PQQ8%2B4X6%20Andi%20Az%2C%20Penajam%2C%20Kabupaten%20Penajam%20Paser%20Utara%2C%20Kalimantan%20Timur%2076142"
+                target="_blank"
+                rel="noreferrer"
+                class="w-full rounded-full bg-ink px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-slate-300/50 transition hover:-translate-y-0.5 sm:w-auto"
+              >
+                Buka di Google Maps
+              </a>
+              <a
+                href="https://wa.me/6285654105889"
+                target="_blank"
+                rel="noreferrer"
+                class="w-full rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-bold text-slate-800 transition hover:border-blush hover:text-blush sm:w-auto"
+              >
+                Tanya Lokasi via WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-[2rem] bg-white p-3 shadow-card">
+            <div class="overflow-hidden rounded-[1.5rem]">
+              <iframe
+                title="Lokasi DreamyGirl Studio"
+                src="https://www.google.com/maps?q=PQQ8%2B4X6%20Andi%20Az%2C%20Penajam%2C%20Kabupaten%20Penajam%20Paser%20Utara%2C%20Kalimantan%20Timur%2076142&z=16&output=embed"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="h-[320px] w-full border-0 sm:h-[420px] lg:h-full lg:min-h-[520px]"
+                allowfullscreen=""
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -210,8 +289,8 @@
         </div>
         <div>
           <p class="text-xs font-bold uppercase tracking-[0.35em] text-pink-200">Kunjungi Kami</p>
-          <p class="mt-4 text-sm text-slate-300">JL. KM 2,5 RT 028 Kec.Penajam.</p>
-          <p class="mt-2 text-sm text-slate-300">Indonesia, Kalimantan TImur.</p>
+          <p class="mt-4 break-words text-sm text-slate-300">PQQ8+4X6 Andi Az, Penajam</p>
+          <p class="mt-2 break-words text-sm text-slate-300">Kabupaten Penajam Paser Utara, Kalimantan Timur 76142</p>
           <p class="mt-2 text-sm text-slate-300">Senin - Sabtu, 10.00 - 20.00</p>
         </div>
         <div>
