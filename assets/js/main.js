@@ -2,32 +2,38 @@ const trendingItems = [
   {
     title: "Korean Minimalist Chrome",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+    position: "center"
   },
   {
     title: "Magnetic Cat Eye",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=80",
+    position: "center"
   },
   {
     title: "3D Luxury Embellished",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80",
+    position: "center"
   },
   {
     title: "Transparent Jelly Pink",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80",
+    position: "center"
   },
   {
     title: "Modern Micro French Tips",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80",
+    position: "center"
   },
   {
     title: "Aesthetic Dream Set",
     tag: "Tren 2026",
-    image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80",
+    position: "center top"
   }
 ];
 
@@ -58,7 +64,16 @@ function renderTrending() {
   container.innerHTML = trendingItems.map((item) => `
     <article class="trend-card section-fade overflow-hidden rounded-[1.7rem] bg-[#111827] shadow-card">
       <div class="relative aspect-[4/5] overflow-hidden">
-        <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async" class="h-full w-full object-cover opacity-90">
+        <img
+          src="${item.image}"
+          alt="${item.title}"
+          width="900"
+          height="1125"
+          loading="lazy"
+          decoding="async"
+          style="object-position:${item.position};"
+          class="h-full w-full object-cover opacity-90"
+        >
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
           <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-pink-200">${item.tag}</p>
           <h3 class="mt-2 text-xl font-extrabold">${item.title}</h3>
@@ -72,7 +87,7 @@ function renderGallery() {
   const container = document.getElementById("gallery-grid");
   container.innerHTML = galleryItems.map((image, index) => `
     <article class="gallery-tile section-fade overflow-hidden rounded-[1.4rem] bg-white shadow-card">
-      <img src="${image}" alt="Galeri design ${index + 1}" loading="lazy" decoding="async" class="aspect-square w-full object-cover">
+      <img src="${image}" alt="Galeri design ${index + 1}" width="900" height="900" loading="lazy" decoding="async" class="aspect-square w-full object-cover">
     </article>
   `).join("");
 }
@@ -81,7 +96,7 @@ function renderSocial() {
   const container = document.getElementById("social-grid");
   container.innerHTML = socialItems.map((image, index) => `
     <article class="social-tile section-fade overflow-hidden rounded-[1.4rem] bg-white p-3 shadow-card">
-      <img src="${image}" alt="Postingan studio ${index + 1}" loading="lazy" decoding="async" class="aspect-square w-full rounded-[1rem] object-cover">
+      <img src="${image}" alt="Postingan studio ${index + 1}" width="900" height="900" loading="lazy" decoding="async" class="aspect-square w-full rounded-[1rem] object-cover">
     </article>
   `).join("");
 }

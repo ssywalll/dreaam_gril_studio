@@ -27,8 +27,6 @@ body {
 .gallery-tile,
 .social-tile {
   transition: transform 180ms ease, box-shadow 180ms ease;
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 320px;
 }
 
 .service-card:hover,
