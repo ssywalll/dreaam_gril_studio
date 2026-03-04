@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(245, 79, 146, 0.08), transparent 24%),
+    radial-gradient(circle at right center, rgba(245, 79, 146, 0.06), transparent 18%),
+    #f6eff2;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1.4rem;
+  pointer-events: none;
+}
+
+.service-card,
+.trend-card,
+.gallery-tile,
+.social-tile {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.service-card:hover,
+.trend-card:hover,
+.gallery-tile:hover,
+.social-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(18, 24, 38, 0.12);
+}
+
+.trend-card img,
+.gallery-tile img,
+.social-tile img {
+  transition: transform 220ms ease;
+}
+
+.trend-card:hover img,
+.gallery-tile:hover img,
+.social-tile:hover img {
+  transform: scale(1.04);
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.section-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

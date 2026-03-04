@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamyGirl Studio</title>
+  <meta name="description" content="Landing page studio premium untuk nail art, lash beauty, dan pengalaman pampering yang elegan.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: "#f54f92",
+            rose: "#f9d7e3",
+            ink: "#121826",
+            cream: "#f8f3f5"
+          },
+          fontFamily: {
+            display: ["Playfair Display", "serif"],
+            sans: ["Manrope", "sans-serif"]
+          },
+          boxShadow: {
+            card: "0 18px 50px rgba(18, 24, 38, 0.08)"
+          },
+          backgroundImage: {
+            "soft-grid": "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-[#f6eff2] font-sans text-slate-900">
+  <div class="min-h-screen">
+    <header class="sticky top-0 z-50 border-b border-white/50 bg-[#f6eff2]/90 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+        <a href="#home" class="flex items-center gap-2 text-sm font-extrabold tracking-wide text-ink">
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-blush text-xs text-white">D</span>
+          DreamyGirl Studio
+        </a>
+        <nav class="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.24em] text-slate-600 md:flex">
+          <a href="#services" class="transition hover:text-blush">Layanan</a>
+          <a href="#trending" class="transition hover:text-blush">Trending</a>
+          <a href="#gallery" class="transition hover:text-blush">Gallery</a>
+          <a href="#pricing" class="transition hover:text-blush">Harga</a>
+        </nav>
+        <a href="#contact" class="rounded-full bg-blush px-4 py-2 text-xs font-bold text-white shadow-lg shadow-pink-300/50 transition hover:-translate-y-0.5">Booking Sekarang</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-soft-grid bg-[size:28px_28px] opacity-20"></div>
+        <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:px-8 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="relative z-10">
+            <span class="inline-flex rounded-full border border-blush/20 bg-white/70 px-4 py-1 text-xs font-bold uppercase tracking-[0.3em] text-blush">Nail Art & Beauty Lounge</span>
+            <h1 class="mt-6 max-w-xl font-display text-5xl leading-tight text-ink md:text-7xl">Dreamy Girl Studio</h1>
+            <p class="mt-5 max-w-xl text-base leading-8 text-slate-600 md:text-lg">
+              Pengalaman premium untuk nail art, lash beauty, dan ritual pampering dengan sentuhan modern, detail rapi, dan nuansa soft glam setiap hari.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#pricing" class="rounded-full bg-blush px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-300/40 transition hover:-translate-y-0.5">Booking Appointment</a>
+              <a href="#gallery" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-800 transition hover:border-blush hover:text-blush">Lihat Semua Design</a>
+            </div>
+            <div class="mt-10 grid max-w-lg grid-cols-3 gap-4">
+              <div class="rounded-2xl bg-white/80 p-4 shadow-card">
+                <p class="text-2xl font-extrabold text-ink">4.9</p>
+                <p class="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">Rating Client</p>
+              </div>
+              <div class="rounded-2xl bg-white/80 p-4 shadow-card">
+                <p class="text-2xl font-extrabold text-ink">180+</p>
+                <p class="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">Pilihan Design</p>
+              </div>
+              <div class="rounded-2xl bg-white/80 p-4 shadow-card">
+                <p class="text-2xl font-extrabold text-ink">7 Days</p>
+                <p class="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">Buka Setiap Hari</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-8 top-14 hidden h-24 w-24 rounded-full bg-rose blur-2xl md:block"></div>
+            <div class="absolute -right-2 bottom-10 hidden h-32 w-32 rounded-full bg-[#f6c1d3] blur-3xl md:block"></div>
+            <div class="hero-card relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-card">
+              <img
+                src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80"
+                alt="Close-up manicure elegan"
+                class="h-[320px] w-full rounded-[1.5rem] object-cover object-center md:h-[580px]"
+              >
+              <div class="absolute inset-x-8 bottom-8 rounded-[1.5rem] bg-white/88 p-5 backdrop-blur">
+                <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Signature Soft Gel</p>
+                <div class="mt-2 flex items-end justify-between gap-4">
+                  <div>
+                    <p class="font-display text-2xl text-ink">Studio Glow Finish</p>
+                    <p class="mt-1 text-sm text-slate-600">Manicure clean look premium dengan pilihan warna nude yang lembut.</p>
+                  </div>
+                  <span class="rounded-full bg-ink px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white">Baru</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-7xl px-4 py-14 md:px-8">
+        <div class="text-center">
+          <h2 class="font-display text-3xl text-ink md:text-4xl">Layanan Kami</h2>
+          <div class="mx-auto mt-4 h-1 w-20 rounded-full bg-blush"></div>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=900&q=80" alt="Nail art" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Nail Art</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Custom gel design, glossy overlay, dan perawatan cuticle premium dengan hasil akhir rapi khas studio.</p>
+          </article>
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80" alt="Eyelash extension" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Eyelash Extension</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Soft volume, wispy set, dan lash styling yang disesuaikan untuk look harian maupun acara spesial.</p>
+          </article>
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1583001809873-a128495da465?auto=format&fit=crop&w=900&q=80" alt="Lash lift" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Lash Lift</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Treatment praktis yang mengangkat dan menegaskan bulu mata alami untuk tampilan mata lebih segar.</p>
+          </article>
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80" alt="Brow lamination" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Brow Lamination</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Membantu membentuk alis agar terlihat lebih lifted, rapi, penuh, dan tahan lebih lama.</p>
+          </article>
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=80" alt="Produk manicure dan pedicure" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Manicure & Pedicure</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Sesi relaksasi lengkap dengan cleanup, shaping, exfoliation, dan aplikasi warna yang cantik.</p>
+          </article>
+          <article class="service-card rounded-[1.6rem] bg-white p-4 shadow-card">
+            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80" alt="Foot spa" class="h-48 w-full rounded-[1.2rem] object-cover">
+            <h3 class="mt-4 text-lg font-extrabold text-ink">Foot Spa</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600">Ritual relaksasi dengan warm soak, scrub, mask, dan massage untuk kaki yang lebih halus dan nyaman.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="trending" class="bg-white/60 py-14">
+        <div class="mx-auto max-w-7xl px-4 md:px-8">
+          <div class="flex items-end justify-between gap-4">
+            <div>
+              <h2 class="font-display text-3xl text-ink md:text-4xl">Trending Saat Ini</h2>
+              <p class="mt-2 text-sm text-slate-500">Pilihan style favorit client dengan sentuhan modern yang elegan.</p>
+            </div>
+            <a href="#gallery" class="text-sm font-bold text-blush">Lihat Semua Katalog</a>
+          </div>
+          <div id="trending-grid" class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="mx-auto max-w-7xl px-4 py-14 md:px-8">
+        <div class="text-center">
+          <h2 class="font-display text-3xl text-ink md:text-4xl">Galeri Design</h2>
+          <p class="mt-3 text-sm text-slate-500">Inspirasi detail cantik untuk appointment kamu berikutnya.</p>
+        </div>
+        <div id="gallery-grid" class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4"></div>
+      </section>
+
+      <section id="pricing" class="bg-white/60 py-14">
+        <div class="mx-auto max-w-5xl px-4 md:px-8">
+          <div class="text-center">
+            <h2 class="font-display text-3xl text-ink md:text-4xl">Investasi Kecantikan</h2>
+            <p class="mt-3 text-sm text-slate-500">Harga transparan untuk layanan premium kami.</p>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <div class="rounded-[2rem] bg-white p-6 shadow-card">
+              <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Nails & Gel</p>
+              <div class="mt-5 space-y-4 text-sm text-slate-600">
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Classic Manicure</span><span class="font-bold text-ink">Rp. 166.050</span></div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Signature Gel Set</span><span class="font-bold text-ink">mulai Rp. 275.000</span></div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Full Nailart Extension</span><span class="font-bold text-ink">Rp. 332.100</span></div>
+                <div class="flex justify-between gap-4"><span>Deluxe Pedicure</span><span class="font-bold text-ink">Rp. 221.400</span></div>
+              </div>
+            </div>
+            <div class="rounded-[2rem] bg-white p-6 shadow-card">
+              <p class="text-xs font-bold uppercase tracking-[0.35em] text-blush">Lashes & Brows</p>
+              <div class="mt-5 space-y-4 text-sm text-slate-600">
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Natural Classic Set</span><span class="font-bold text-ink">Rp. 120.000</span></div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Hybrid / Volume Set</span><span class="font-bold text-ink">Rp. 225.000</span></div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-4"><span>Lash Lift & Tint</span><span class="font-bold text-ink">Rp. 135.000</span></div>
+                <div class="flex justify-between gap-4"><span>Brow Lamination & Styling</span><span class="font-bold text-ink">Rp. 155.000</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-4xl px-4 py-14 md:px-8">
+        <div class="rounded-[2.4rem] bg-gradient-to-r from-[#ffe5ef] via-[#fff6f9] to-[#f6dbe6] px-8 py-14 text-center shadow-card">
+          <h2 class="font-display text-3xl text-ink md:text-4xl">Siap Untuk Dimanjakan?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600">Booking slot kamu hari ini melalui platform yang paling nyaman. Kami sarankan reservasi 2 minggu lebih awal untuk request design spesial.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="https://wa.me/6285654105889" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-green-200">WhatsApp</a>
+            <a href="https://www.instagram.com/dreamygirl.studio/" class="inline-flex items-center rounded-full bg-blush px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-200">Instagram DM</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-16">
+        <div class="mx-auto max-w-6xl px-4 md:px-8">
+          <div class="text-center">
+            <h2 class="font-display text-3xl text-ink md:text-4xl">Follow Us @DreamyGirlStudio</h2>
+            <p class="mt-3 text-sm text-slate-500">Update harian studio dan hasil cantik client kami.</p>
+          </div>
+          <div id="social-grid" class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#0d1730] text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-3 md:px-8">
+        <div>
+          <a href="#home" class="flex items-center gap-2 text-sm font-extrabold tracking-wide">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-blush text-xs text-white">D</span>
+            DreamyGirl Studio
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-7 text-slate-300">Layanan nail, lash, dan brow yang dirancang detail untuk ritual kecantikan feminin yang elegan.</p>
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.35em] text-pink-200">Kunjungi Kami</p>
+          <p class="mt-4 text-sm text-slate-300">JL. KM 2,5 RT 028 Kec.Penajam.</p>
+          <p class="mt-2 text-sm text-slate-300">Indonesia, Kalimantan TImur.</p>
+          <p class="mt-2 text-sm text-slate-300">Senin - Sabtu, 10.00 - 20.00</p>
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.35em] text-pink-200">Kontak</p>
+          <p class="mt-4 text-sm text-slate-300">hello@dreamygirlstudio.com</p>
+          <p class="mt-2 text-sm text-slate-300">+62 856-5410-5889</p>
+          <p class="mt-6 text-xs text-slate-400">(c) 2026 DreamyGirl Studio. Semua hak dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
